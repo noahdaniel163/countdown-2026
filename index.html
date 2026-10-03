@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0c1d" />
+  <title>October 10, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100svh; margin: 0; overflow: hidden; display: grid; place-items: center;
+      color: #f7f7ff; font-family: Manrope, Arial, sans-serif; background: #090a1a;
+    }
+    .aurora, .aurora::before, .aurora::after { position: fixed; inset: -25vmax; pointer-events: none; content: ""; }
+    .aurora { background: radial-gradient(circle at 30% 30%, #5633be 0 8%, transparent 26%), radial-gradient(circle at 72% 70%, #007f9b 0 7%, transparent 26%); filter: blur(22px); animation: drift 20s ease-in-out infinite alternate; }
+    .aurora::before { background: radial-gradient(circle at 70% 25%, #d5499a 0 5%, transparent 21%); animation: drift 15s ease-in-out infinite alternate-reverse; }
+    .aurora::after { background: radial-gradient(circle at 36% 75%, #165fc9 0 5%, transparent 20%); animation: drift 24s ease-in-out infinite alternate; }
+    .grain { position: fixed; inset: 0; opacity: .22; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E"); }
+    main { width: min(1120px, calc(100% - 32px)); padding: clamp(24px, 5vw, 64px); position: relative; text-align: center; border: 1px solid rgba(255,255,255,.19); border-radius: 32px; background: linear-gradient(125deg, rgba(255,255,255,.13), rgba(255,255,255,.045)); box-shadow: 0 30px 90px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.16); backdrop-filter: blur(22px); }
+    .eyebrow { margin: 0 0 18px; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #cfcdf8; }
+    h1 { max-width: 720px; margin: 0 auto; font-weight: 500; font-size: clamp(2rem, 5vw, 4.6rem); letter-spacing: -.055em; line-height: 1.05; }
+    h1 span { color: #c7c3ff; }
+    .subtitle { margin: 18px auto 0; color: rgba(247,247,255,.68); font-size: clamp(.85rem, 2vw, 1rem); }
+    .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, 2vw, 20px); margin-top: clamp(38px, 6vw, 68px); }
+    .unit { min-width: 0; padding: clamp(17px, 3vw, 28px) 8px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(7,8,25,.22); }
+    .number { display: block; font-family: "DM Mono", monospace; font-size: clamp(2rem, 7vw, 5.8rem); font-weight: 500; letter-spacing: -.1em; line-height: 1; font-variant-numeric: tabular-nums; text-shadow: 0 0 28px rgba(199,195,255,.28); }
+    .label { display: block; margin-top: 13px; color: rgba(247,247,255,.55); font-size: clamp(.58rem, 1.2vw, .72rem); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .footer { margin: clamp(38px, 5vw, 58px) 0 0; color: rgba(247,247,255,.48); font-size: .75rem; letter-spacing: .07em; }
+    .time { position: absolute; top: 24px; right: 28px; font: .66rem "DM Mono", monospace; color: rgba(247,247,255,.45); }
+    .finished .countdown, .finished .subtitle, .finished .footer { display: none; }
+    .finished h1 { font-size: clamp(3rem, 10vw, 8rem); color: #fff; text-shadow: 0 0 45px rgba(210,199,255,.6); animation: arrive 1.5s ease-in-out infinite alternate; }
+    @keyframes drift { from { transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1); } to { transform: translate3d(4%, 5%, 0) rotate(16deg) scale(1.12); } }
+    @keyframes arrive { to { transform: scale(1.025); text-shadow: 0 0 68px rgba(210,199,255,.9); } }
+    @media (max-width: 520px) { main { border-radius: 25px; padding: 44px 14px 32px; } .time { top: 17px; right: 19px; } .countdown { gap: 7px; } .unit { border-radius: 14px; } .label { letter-spacing: .1em; } }
+  </style>
+</head>
+<body>
+  <div class="aurora"></div><div class="grain"></div>
+  <main id="card">
+    <span class="time">UTC+7 · VIETNAM</span>
+    <p class="eyebrow">A moment in time</p>
+    <h1 id="headline">Until <span>October 10</span></h1>
+    <p class="subtitle">Saturday, October 10, 2026 · 00:00:00</p>
+    <section class="countdown" aria-label="Countdown">
+      <div class="unit"><output class="number" id="days">000</output><span class="label">Days</span></div>
+      <div class="unit"><output class="number" id="hours">00</output><span class="label">Hours</span></div>
+      <div class="unit"><output class="number" id="minutes">00</output><span class="label">Minutes</span></div>
+      <div class="unit"><output class="number" id="seconds">00</output><span class="label">Seconds</span></div>
+    </section>
+    <p class="footer">Counting down to a new beginning</p>
+  </main>
+  <script>
+    const target = new Date('2026-10-10T00:00:00+07:00').getTime();
+    const elements = ['days', 'hours', 'minutes', 'seconds'].map(id => document.getElementById(id));
+    const pad = (value, digits = 2) => String(value).padStart(digits, '0');
+    function updateCountdown() {
+      let remaining = target - Date.now();
+      if (remaining <= 0) {
+        document.getElementById('card').classList.add('finished');
+        document.getElementById('headline').textContent = "IT'S TIME";
+        return;
+      }
+      const days = Math.floor(remaining / 86400000);
+      remaining %= 86400000;
+      const hours = Math.floor(remaining / 3600000);
+      remaining %= 3600000;
+      const minutes = Math.floor(remaining / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+      [pad(days, 3), pad(hours), pad(minutes), pad(seconds)].forEach((value, index) => elements[index].textContent = value);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
