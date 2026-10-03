@@ -1,67 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b0c1d" />
-  <title>October 10, 2026</title>
+  <meta name="theme-color" content="#ff7b89" />
+  <title>Đếm ngược sinh nhật 30 tuổi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Mono:wght@500&family=Pacifico&display=swap" rel="stylesheet" />
   <style>
-    :root { color-scheme: dark; }
+    :root { color-scheme: light; }
     * { box-sizing: border-box; }
-    body {
-      min-height: 100svh; margin: 0; overflow: hidden; display: grid; place-items: center;
-      color: #f7f7ff; font-family: Manrope, Arial, sans-serif; background: #090a1a;
-    }
-    .aurora, .aurora::before, .aurora::after { position: fixed; inset: -25vmax; pointer-events: none; content: ""; }
-    .aurora { background: radial-gradient(circle at 30% 30%, #5633be 0 8%, transparent 26%), radial-gradient(circle at 72% 70%, #007f9b 0 7%, transparent 26%); filter: blur(22px); animation: drift 20s ease-in-out infinite alternate; }
-    .aurora::before { background: radial-gradient(circle at 70% 25%, #d5499a 0 5%, transparent 21%); animation: drift 15s ease-in-out infinite alternate-reverse; }
-    .aurora::after { background: radial-gradient(circle at 36% 75%, #165fc9 0 5%, transparent 20%); animation: drift 24s ease-in-out infinite alternate; }
-    .grain { position: fixed; inset: 0; opacity: .22; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E"); }
-    main { width: min(1120px, calc(100% - 32px)); padding: clamp(24px, 5vw, 64px); position: relative; text-align: center; border: 1px solid rgba(255,255,255,.19); border-radius: 32px; background: linear-gradient(125deg, rgba(255,255,255,.13), rgba(255,255,255,.045)); box-shadow: 0 30px 90px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.16); backdrop-filter: blur(22px); }
-    .eyebrow { margin: 0 0 18px; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #cfcdf8; }
-    h1 { max-width: 720px; margin: 0 auto; font-weight: 500; font-size: clamp(2rem, 5vw, 4.6rem); letter-spacing: -.055em; line-height: 1.05; }
-    h1 span { color: #c7c3ff; }
-    .subtitle { margin: 18px auto 0; color: rgba(247,247,255,.68); font-size: clamp(.85rem, 2vw, 1rem); }
-    .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, 2vw, 20px); margin-top: clamp(38px, 6vw, 68px); }
-    .unit { min-width: 0; padding: clamp(17px, 3vw, 28px) 8px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(7,8,25,.22); }
-    .number { display: block; font-family: "DM Mono", monospace; font-size: clamp(2rem, 7vw, 5.8rem); font-weight: 500; letter-spacing: -.1em; line-height: 1; font-variant-numeric: tabular-nums; text-shadow: 0 0 28px rgba(199,195,255,.28); }
-    .label { display: block; margin-top: 13px; color: rgba(247,247,255,.55); font-size: clamp(.58rem, 1.2vw, .72rem); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-    .footer { margin: clamp(38px, 5vw, 58px) 0 0; color: rgba(247,247,255,.48); font-size: .75rem; letter-spacing: .07em; }
-    .time { position: absolute; top: 24px; right: 28px; font: .66rem "DM Mono", monospace; color: rgba(247,247,255,.45); }
-    .finished .countdown, .finished .subtitle, .finished .footer { display: none; }
-    .finished h1 { font-size: clamp(3rem, 10vw, 8rem); color: #fff; text-shadow: 0 0 45px rgba(210,199,255,.6); animation: arrive 1.5s ease-in-out infinite alternate; }
-    @keyframes drift { from { transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1); } to { transform: translate3d(4%, 5%, 0) rotate(16deg) scale(1.12); } }
-    @keyframes arrive { to { transform: scale(1.025); text-shadow: 0 0 68px rgba(210,199,255,.9); } }
-    @media (max-width: 520px) { main { border-radius: 25px; padding: 44px 14px 32px; } .time { top: 17px; right: 19px; } .countdown { gap: 7px; } .unit { border-radius: 14px; } .label { letter-spacing: .1em; } }
+    body { min-height: 100svh; margin: 0; overflow-x: hidden; display: grid; place-items: center; color: #45263b; font-family: "Be Vietnam Pro", sans-serif; background: #fff4ec; }
+    body::before, body::after { position: fixed; z-index: -2; width: 45vmax; height: 45vmax; border-radius: 50%; content: ""; filter: blur(2px); }
+    body::before { top: -20vmax; left: -14vmax; background: #ffc3c9; }
+    body::after { right: -17vmax; bottom: -22vmax; background: #ffd89b; }
+    .sprinkles { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; opacity: .75; background-image: radial-gradient(#f28482 1.5px, transparent 1.6px), radial-gradient(#8075ff 1.5px, transparent 1.6px), radial-gradient(#f9ae51 1.5px, transparent 1.6px); background-position: 0 0, 37px 23px, 83px 71px; background-size: 127px 127px; }
+    main { position: relative; width: min(950px, calc(100% - 32px)); margin: 30px 16px; padding: clamp(34px, 6vw, 66px); overflow: hidden; text-align: center; border: 1px solid rgba(255,255,255,.85); border-radius: 38px; background: rgba(255,253,250,.75); box-shadow: 0 22px 70px rgba(151,79,91,.18); backdrop-filter: blur(14px); }
+    main::before { position: absolute; top: -115px; right: -95px; width: 235px; height: 235px; border: 20px solid rgba(255,183,119,.23); border-radius: 50%; content: ""; }
+    .date { display: inline-flex; align-items: center; gap: 9px; margin: 0; padding: 9px 14px; border-radius: 99px; color: #bf5268; font-size: .73rem; font-weight: 800; letter-spacing: .08em; background: #ffe4df; }
+    .cake { display: block; margin: 22px 0 10px; font-size: clamp(2.5rem, 6vw, 4.2rem); filter: drop-shadow(0 7px 6px rgba(146,75,73,.17)); animation: float 2.5s ease-in-out infinite alternate; }
+    .eyebrow { margin: 0 0 8px; color: #b76b76; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 750px; margin: 0 auto; font-size: clamp(2.1rem, 5.7vw, 4.8rem); font-weight: 800; letter-spacing: -.065em; line-height: 1.06; }
+    h1 em { color: #f06f78; font-family: Pacifico, cursive; font-size: 1.05em; font-style: normal; font-weight: 400; letter-spacing: -.03em; white-space: nowrap; }
+    .tease { max-width: 570px; margin: 20px auto 0; color: #765469; font-size: clamp(.9rem, 2vw, 1.05rem); line-height: 1.65; }
+    .tease strong { color: #d65568; }
+    .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, 1.8vw, 18px); margin-top: clamp(32px, 5vw, 53px); }
+    .unit { padding: clamp(15px, 2.5vw, 25px) 7px 16px; border: 1px solid #f8dcd3; border-radius: 22px; background: linear-gradient(145deg, #fff, #fff7f2); box-shadow: 0 9px 18px rgba(162,100,95,.07); }
+    .number { display: block; color: #4e3044; font-family: "DM Mono", monospace; font-size: clamp(1.7rem, 6vw, 4.7rem); font-variant-numeric: tabular-nums; letter-spacing: -.1em; line-height: 1; }
+    .label { display: block; margin-top: 12px; color: #b57d80; font-size: clamp(.55rem, 1.2vw, .7rem); font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .footer { margin: 29px 0 0; color: #9d7880; font-size: .78rem; }
+    .footer span { color: #ed7680; }
+    .finished .countdown, .finished .tease, .finished .footer { display: none; }
+    .finished .cake { animation: party .75s ease-in-out infinite alternate; }
+    .finished h1 { color: #ee6976; font-size: clamp(2.9rem, 9vw, 7rem); }
+    @keyframes float { to { transform: translateY(-8px) rotate(2deg); } }
+    @keyframes party { to { transform: scale(1.1) rotate(-5deg); } }
+    @media (max-width: 520px) { main { margin: 14px 10px; padding: 34px 14px; border-radius: 28px; } .countdown { gap: 6px; } .unit { border-radius: 15px; } .label { letter-spacing: .06em; } }
   </style>
 </head>
 <body>
-  <div class="aurora"></div><div class="grain"></div>
+  <div class="sprinkles"></div>
   <main id="card">
-    <span class="time">UTC+7 · VIETNAM</span>
-    <p class="eyebrow">A moment in time</p>
-    <h1 id="headline">Until <span>October 10</span></h1>
-    <p class="subtitle">Saturday, October 10, 2026 · 00:00:00</p>
-    <section class="countdown" aria-label="Countdown">
-      <div class="unit"><output class="number" id="days">000</output><span class="label">Days</span></div>
-      <div class="unit"><output class="number" id="hours">00</output><span class="label">Hours</span></div>
-      <div class="unit"><output class="number" id="minutes">00</output><span class="label">Minutes</span></div>
-      <div class="unit"><output class="number" id="seconds">00</output><span class="label">Seconds</span></div>
+    <p class="date">✨ 10 THÁNG 10, 2026 · 00:00</p>
+    <span class="cake" aria-hidden="true">🎂</span>
+    <p class="eyebrow">Birthday countdown</p>
+    <h1 id="headline">Đếm ngược đến tuổi <em>30 rực rỡ!</em></h1>
+    <p class="tease">Một cột mốc rất xịn. Còn chuyện <strong>chính thức tập làm quen với U40</strong> thì… để từ từ tính nha! 😌</p>
+    <section class="countdown" aria-label="Thời gian còn lại đến sinh nhật">
+      <div class="unit"><output class="number" id="days">000</output><span class="label">Ngày</span></div>
+      <div class="unit"><output class="number" id="hours">00</output><span class="label">Giờ</span></div>
+      <div class="unit"><output class="number" id="minutes">00</output><span class="label">Phút</span></div>
+      <div class="unit"><output class="number" id="seconds">00</output><span class="label">Giây</span></div>
     </section>
-    <p class="footer">Counting down to a new beginning</p>
+    <p class="footer">Còn chút xíu nữa là được thổi nến rồi <span>♥</span></p>
   </main>
   <script>
     const target = new Date('2026-10-10T00:00:00+07:00').getTime();
+    const card = document.getElementById('card');
+    const headline = document.getElementById('headline');
     const elements = ['days', 'hours', 'minutes', 'seconds'].map(id => document.getElementById(id));
     const pad = (value, digits = 2) => String(value).padStart(digits, '0');
     function updateCountdown() {
       let remaining = target - Date.now();
       if (remaining <= 0) {
-        document.getElementById('card').classList.add('finished');
-        document.getElementById('headline').textContent = "IT'S TIME";
+        card.classList.add('finished');
+        headline.innerHTML = 'Happy birthday! <em>30 tuổi rồi nha 🎉</em>';
         return;
       }
       const days = Math.floor(remaining / 86400000);
